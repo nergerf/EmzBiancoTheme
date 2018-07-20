@@ -165,35 +165,18 @@
             <div class="emz-product--details-description-content-wrapper">
                 <div class="emz-product--details-description">
                     <div class="emz-product--details-description-title">
-                        Beschreibung
+                        {s namespace="frontend/detail/index" name="EmzDescriptionHeadline"}Beschreibung{/s}
                     </div>
                     <div class="emz-product--details-description-content emz-product--details-description-slide">
-                        Gehobenes Basic fürs Office: der BOSS Anzug aus besonders softer Schurwolle. Der gerade geschnittene Herren-Zweiteiler besteht aus einem Sakko mit AMF-Nähten und charakteristischem Knopf am linken Ärmel sowie einer Bundfaltenhose mit Reißverschluss. Makellose Business Looks sind mit diesem präzise gefertigten Ensemble ein Leichtes.
+                        {$sArticle.description_long}
                     </div>
                 </div>
                 <div class="emz-product--details-description">
                     <div class="emz-product--details-description-title">
-                        MATERIAL UND PFLEGE
+                        {s namespace="frontend/detail/index" name="EmzDescriptionAdditionalHeadline"}Material und Pflege{/s}
                     </div>
                     <div class="emz-product--details-description-content-additional emz-product--details-description-slide">
-                        Materialangabe: 100% Schurwolle, Futter: 64% Viscose, 36% Polyester, Ärmelfutter: 64% Viscose, 36% Polyester
-
-<<<<<<< HEAD
-                    <div class="emz-product--details-description-content-additional-icons">
-                        {if $sArticle.sProperties}
-                            <ul>
-                                {foreach $sArticle.sProperties as $property}
-                                    {if $property.attributes.core && $property.attributes.core->get('emz_full_hide_details')}
-                                        {foreach $property.options as $option}
-                                            <li>
-                                                {if $option.attributes.core && $option.attributes.core->get('emz_wash_icon')}<div class="icon icon---{$option.attributes.core->get('emz_wash_icon')}"></div>{/if}<div class="icon-label">{$option.name}</div>
-                                            </li>
-                                        {/foreach}
-                                    {/if}
-                                {/foreach}
-                            </ul>
-                        {/if}
-=======
+                        {$sArticle.attr3}
                         <div class="emz-product--details-description-content-additional-icons">
                             {if $sArticle.sProperties}
                                 <ul>
@@ -209,7 +192,6 @@
                                 </ul>
                             {/if}
                         </div>
->>>>>>> bd2a23e323a85fd6766704c96cc1d2d7e1d81596
                     </div>
                 </div>
             </div>
